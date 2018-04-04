@@ -1,6 +1,6 @@
 var express = require("express");
 var mongoose = require("mongoose");
-var jobModel = require("./data/models/Job.js")
+var jobModel = require("./public/models/Job.js")
 var app = express();
 
 app.set('views',__dirname);
