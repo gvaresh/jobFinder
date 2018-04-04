@@ -18,8 +18,8 @@ app.get('*',function(req,res){
     res.render('index');
 });
 
-mongoose.connect('mongodb://localhost/jobfinder');
-//.connect('mongodb://psdev:psdev@ds235239.mlab.com:35239/jobfinder');
+//mongoose.connect('mongodb://localhost/jobfinder');
+mongoose.connect('mongodb://psdev:psdev@ds235239.mlab.com:35239/jobfinder');
 
 
 var con = mongoose.connection;
