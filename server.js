@@ -1,15 +1,16 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var jobModel = require("./public/models/Job.js")
+var jobsData = require("./jobs-data.js");
 var app = express();
 
 app.set('views',__dirname);
 app.set("view engine", 'jade');
 
 app.use(express.static(__dirname+'/public'));
+
 app.get('/api/jobs', function(req,res){
-   // res.send('test');
-   mongoose.model('Job').find({}).exec(function(error,collection){
+    jobsData.findJobs().then(function(collection){
        res.send(collection);
    })
 })
