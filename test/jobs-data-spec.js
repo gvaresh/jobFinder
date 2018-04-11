@@ -17,7 +17,7 @@ describe("get jobs", function(){
     var jobs;
     
     before(function(done){
-         mongoose.connect('mongodb://localhost/jobfinder')
+         mongoose.connect('mongodb://psdev:psdev@ds235239.mlab.com:35239/jobfinder')
            .then(resetJobs)
            .then(jobModel.seedJobs)
            .then(jobsData.findJobs)
